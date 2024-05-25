@@ -1,7 +1,6 @@
 import { AppBar, Box, Button, IconButton, Toolbar, Typography, MenuIcon } from '@mui/material';
 
-
-export default function Appbar() {
+export default function Navbar() {
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
