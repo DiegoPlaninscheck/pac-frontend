@@ -1,0 +1,44 @@
+*{
+    color: #02285A;
+}
+
+.navbar {
+    padding: 20px;
+    display: flex;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 120px;
+    margin-right: 10px;
+}
+
+.navbar-logo p {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+}
+
+.navbar-links li {
+    margin-right: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navbar-links a:hover {
+    color: #333;
+}

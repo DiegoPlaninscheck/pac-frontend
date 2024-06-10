@@ -1,0 +1,10 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer p {
+    margin-top: 20;
+    text-align: center;
+    color: #808080;
+}
