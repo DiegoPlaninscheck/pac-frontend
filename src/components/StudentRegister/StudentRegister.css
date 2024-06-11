@@ -1,0 +1,37 @@
+.box-cadastro {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.imagem {
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+.container-cadastro {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-usuario {
+    margin-bottom: 3rem;
+}
+
+/* #usuario {
+    width: 300px;
+    height: 30px;
+} */
+
+.container-senha {
+    margin-bottom: 3rem;
+}
+
+/* #senha {
+    width: 300px;
+    height: 30px;
+} */
