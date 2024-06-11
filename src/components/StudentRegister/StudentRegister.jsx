@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Button, TextField, Typography } from '@mui/material';
 import AlunoConstancia from '../../assets/alunoConstancia.png';
 import "./StudentRegister.css";
@@ -22,7 +23,11 @@ const StudentRegister = () => {
                     </div>
 
                     <div>
-                        <Button sx={{ backgroundColor: "#0D3162" }} variant='contained'>Realizar cadastro</Button>
+                        <Link to="/acesso-usuario" style={{ textDecoration: 'none' }}>
+                            <Button sx={{ backgroundColor: "#0D3162" }} variant='contained'>
+                                Realizar cadastro
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import StudentRegister from "../components/StudentRegister/StudentRegister";
 
-const CadastroUsuario = () => {
+const UserRegisterPage = () => {
     return (
         <>
             <StudentRegister />
@@ -8,4 +8,4 @@ const CadastroUsuario = () => {
     )
 }
 
-export default CadastroUsuario;
+export default UserRegisterPage;
