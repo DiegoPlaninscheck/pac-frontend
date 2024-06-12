@@ -11,7 +11,7 @@ const StudentRegister = () => {
                 </div>
 
                 <div className='container-cadastro'>
-                    <Typography sx={{ marginBottom: "2rem" }} variant='h4'>Cadastro de usuário</Typography>
+                    <Typography sx={{ marginBottom: "2rem", fontFamily: 'Montserrat' }} variant='h4'>Cadastro de usuário</Typography>
 
                     <div className='container-usuario'>
                         <TextField sx={{ width: "300px" }} id="usuario" label="Usuário" variant="outlined" />
