@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Typography } from "@mui/material";
+import { Typography, Button, Box } from "@mui/material";
 import TablePreMatricula from "../components/TablePreMatricula/TablePreMatricula";
 
 const VisualizarPreMatricula = () => {
@@ -66,9 +66,17 @@ const VisualizarPreMatricula = () => {
         ]);
     }, []);
 
+    function exportToExcel() {
+        console.log('Exporting to Excel');
+        
+    }
+
     return (
         <>
-            <Typography sx={{ fontFamily: "Montserrat" }} variant="h4" component="h1" gutterBottom>Visualizar Pré-Matrícula</Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '0 1rem 0 1rem' }}>
+                <Typography sx={{ fontFamily: "Montserrat" }} variant="h4" component="h1" gutterBottom>Visualizar Pré-Matrícula</Typography>
+                <Button variant="contained" color="primary" onClick={() => exportToExcel()}>Export to Excel</Button>
+        </Box >
             <TablePreMatricula data={data} />
         </>
     );
