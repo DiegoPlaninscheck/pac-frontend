@@ -3,6 +3,7 @@ import HomePage from './pages/Home';
 import CadastroUsuarioPage from "./pages/CadastroUsuario";
 import './App.css';
 import VisualizarPreMatricula from './pages/VisualizarPreMatricula';
+import PreMatriculaFinal from './pages/PreMatriculaFinal';
 
 const App = () => {
   return (
@@ -11,6 +12,8 @@ const App = () => {
         <Route exact path="/" element={<HomePage />} />
         <Route exact path='/cadastro-usuario' element={<CadastroUsuarioPage />} />
         <Route exact path='/visualizar-pre-matricula' element={<VisualizarPreMatricula />} />
+        <Route exact path='/pre-matricula-final' element={<PreMatriculaFinal />} />
+        <Route exact path='/pre-matricula' element={<PreMatricula />} />
       </Routes>
     </BrowserRouter>
   );
