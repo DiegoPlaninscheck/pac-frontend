@@ -2,6 +2,11 @@ body {
     margin: 0;
 }
 
+.link {
+    color: #fff;
+    text-decoration: none;
+}
+
 .imagem {
     max-width: 100%;
     min-height: 100vh;

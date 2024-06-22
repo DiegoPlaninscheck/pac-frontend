@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+
+import PreMatriculaFinal from "./PreMatriculaFinal";
+
 import { Box, TextField, Typography, Button } from "@mui/material"
 import { styled } from '@mui/system'
 import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded';
@@ -47,7 +51,7 @@ const PreMatricula = () => {
                         <TextField sx={{ width: "250px" }} id="Cidade" label="Cidade" variant="outlined" />
                     </BoxInputs>
                     <Box sx={{ width: "100%", display: "flex", justifyContent: "center", marginTop: "3rem" }}>
-                        <Button sx={{ width: "80%", height: "3rem", backgroundColor: "#0D3162" }} variant="contained" endIcon={<NavigateNextRoundedIcon />}> Proximo passo</Button>
+                        <Button sx={{ width: "80%", height: "3rem", backgroundColor: "#0D3162" }} variant="contained" endIcon={<NavigateNextRoundedIcon />}><Link className="link" to={"/pre-matricula-final"}>Proximo passo</Link></Button>
                     </Box>
                 </Box>
             </Box >
