@@ -1,9 +1,9 @@
-import { Box } from "@mui/material"
+import { Box, TextField } from "@mui/material"
 import AlunoConstancia from "../assets/alunoConstancia.png"
-import "../components/MatriculaFinal/MatriculaFinal.css"
+import "../components/PreMatricula/PreMatricula.css"
 
 
-const PreMatriculaFinal = () => {
+const PreMatricula = () => {
     return (
         <>
             <div className="student-image-container">
@@ -23,3 +23,6 @@ const PreMatriculaFinal = () => {
         </>
     )
 }
+
+
+export default PreMatricula;

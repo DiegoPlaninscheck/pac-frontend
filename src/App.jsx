@@ -4,6 +4,7 @@ import CadastroUsuarioPage from "./pages/CadastroUsuario";
 import './App.css';
 import VisualizarPreMatricula from './pages/VisualizarPreMatricula';
 import PreMatriculaFinal from './pages/PreMatriculaFinal';
+import PreMatricula from './pages/PreMatricula';
 
 const App = () => {
   return (
