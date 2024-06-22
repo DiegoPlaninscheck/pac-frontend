@@ -9,27 +9,27 @@ const VisualizarPreMatricula = () => {
     const [data, setData] = useState([
         {
             id: 1,
-            numeroCadastro: 123,
+            numero_cadastro: 123,
             aluno: 'aluno 1',
-            nascimento: '08/03/2005',
+            data_nascimento: '08/03/2005',
             resposavel: 'responsavel 1',
             telefone: '123456789',
             email: "diego@gmail.com",
         },
         {
             id: 2,
-            numeroCadastro: 456,
+            numero_cadastro: 456,
             aluno: 'aluno 2',
-            nascimento: '08/03/2005',
+            data_nascimento: '08/03/2005',
             resposavel: 'responsavel 2',
             telefone: '123456789',
             email: "gabriel@gmail.com",
         },
         {
             id: 3,
-            numeroCadastro: 789,
+            numero_cadastro: 789,
             aluno: 'aluno 3',
-            nascimento: '08/03/2005',
+            data_nascimento: '08/03/2005',
             resposavel: 'responsavel 3',
             telefone: '123456789',
             email: "eduarda@gmail.com",
@@ -40,27 +40,27 @@ const VisualizarPreMatricula = () => {
         setData([
             {
                 id: 1,
-                numeroCadastro: 123,
+                numero_cadastro: 123,
                 aluno: 'aluno 1',
-                nascimento: '08/03/2005',
+                data_nascimento: '08/03/2005',
                 resposavel: 'responsavel 1',
                 telefone: '123456789',
                 email: "diego@gmail.com",
             },
             {
                 id: 2,
-                numeroCadastro: 456,
+                numero_cadastro: 456,
                 aluno: 'aluno 2',
-                nascimento: '08/03/2005',
+                data_nascimento: '08/03/2005',
                 resposavel: 'responsavel 2',
                 telefone: '123456789',
                 email: "gabriel@gmail.com",
             },
             {
                 id: 3,
-                numeroCadastro: 789,
+                numero_cadastro: 789,
                 aluno: 'aluno 3',
-                nascimento: '08/03/2005',
+                data_nascimento: '08/03/2005',
                 resposavel: 'responsavel 3',
                 telefone: '123456789',
                 email: "eduarda@gmail.com",
@@ -70,12 +70,11 @@ const VisualizarPreMatricula = () => {
 
     function exportToExcel() {
         console.log('Exporting to Excel');
-        axios.post("/registration/exportToExcel", {
-            body: data,
+        axios.post("/exportToExcel", data, {
             headers: {
                 "Content-Type": "application/json",
             }
-        });
+        }).then((res) => console.log(res));
     }
 
     return (

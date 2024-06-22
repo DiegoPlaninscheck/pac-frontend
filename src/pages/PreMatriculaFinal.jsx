@@ -1,6 +1,7 @@
 import { Button, TextField, Box, RadioGroup, FormControlLabel, Radio } from "@mui/material";
+
 import AlunoConstancia from "../assets/alunoConstancia.png"
-import "../components/MatriculaFinal/MatriculaFinal.css"
+import "../components/PreMatriculaFinal/PreMatriculaFinal.css"
 
 
 const PreMatriculaFinal = () => {

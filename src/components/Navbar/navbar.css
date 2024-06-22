@@ -1,10 +1,7 @@
-*{
-    color: #02285A;
-}
-
 .navbar {
     padding: 20px;
     display: flex;
+    color: #02285A;
 }
 
 .navbar-logo {
