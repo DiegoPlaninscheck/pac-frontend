@@ -6,6 +6,9 @@ import PreMatriculaFinal from './pages/PreMatriculaFinal';
 import PreMatricula from './pages/PreMatricula';
 import HomePage from './pages/HomePage';
 import UserRegister from './pages/UserRegisterPage';
+import CadastroUsuarioPage from "./pages/UserRegisterPage";
+import EmployeePage from './pages/EmployeePage';
+import PreRegistrationPage from './pages/PreRegistrationPage';
 import './App.css';
 
 const App = () => {
@@ -18,6 +21,9 @@ const App = () => {
         <Route exact path='/pre-matricula-final' element={<PreMatriculaFinal />} />
         <Route exact path='/pre-matricula' element={<PreMatricula />} />
         <Route exact path="/funcionario" element={<UserRegister />} />
+        <Route exact path='/funcionario' element={<CadastroUsuarioPage />} />
+        <Route exact path='/pre-matricula' element={<PreRegistrationPage />} />
+        <Route exact path='/acesso-usuario' element={<EmployeePage />} />
       </Routes>
     </BrowserRouter>
   );

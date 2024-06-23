@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import logoConstancia from '../../assets/logoConstancia.png';
 import './navbar.css';
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
@@ -13,10 +13,10 @@ const Navbar = () => {
             </div>
             <ul className="navbar-links">
                 <li>
-                    <Link to="/pre-matricula">PRÉ-MATRÍCULA</Link>
+                    <Link to="/pre-matricula">{props.firstLink}</Link>
                 </li>
                 <li>
-                    <Link to="/funcionario">FUNCIONÁRIO</Link>
+                    <Link to="/funcionario">{props.secondLink}</Link>
                 </li>
             </ul>
         </nav>

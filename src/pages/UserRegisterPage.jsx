@@ -1,9 +1,11 @@
-const UserRegister = () => {
-    return (
-        <div>
-            <p>Teste</p>
-        </div>
-    );
-};
+import StudentRegister from "../components/StudentRegister/StudentRegister";
 
-export default UserRegister;
+const UserRegisterPage = () => {
+    return (
+        <>
+            <StudentRegister />
+        </>
+    )
+}
+
+export default UserRegisterPage;
