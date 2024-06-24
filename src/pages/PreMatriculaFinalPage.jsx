@@ -4,7 +4,6 @@ import { FileUpload } from 'primereact/fileupload';
 import AlunoConstancia from "../assets/alunoConstancia.png"
 import "../components/PreMatriculaFinal/PreMatriculaFinal.css"
 
-
 const PreMatriculaFinal = () => {
     return (
         <>

@@ -1,9 +1,9 @@
-import StudentRegister from "../components/StudentRegister/StudentRegister";
+import UserRegister from "../components/UserRegister/UserRegister";
 
 const UserRegisterPage = () => {
     return (
         <>
-            <StudentRegister />
+            <UserRegister />
         </>
     )
 }

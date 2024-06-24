@@ -13,10 +13,10 @@ const Navbar = (props) => {
             </div>
             <ul className="navbar-links">
                 <li>
-                    <Link to="/pre-matricula">{props.firstLink}</Link>
+                    <Link to={`/${props.firstLink.link}`}>{props.firstLink.title}</Link>
                 </li>
                 <li>
-                    <Link to="/funcionario">{props.secondLink}</Link>
+                    <Link to={`/${props.secondLink.link}`}>{props.secondLink.title}</Link>
                 </li>
             </ul>
         </nav>

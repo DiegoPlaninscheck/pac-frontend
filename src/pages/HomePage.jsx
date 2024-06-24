@@ -4,8 +4,14 @@ import StudentImage from '../components/StudentImage/StudentImage';
 import Footer from '../components/Footer/Footer'
 
 const HomePage = () => {
-    const firstLink = "PRÉ-MATRÍCULA";
-    const secondLink = "FUNCIONÁRIO";
+    const firstLink = {
+        title: "PRÉ-MATRÍCULA",
+        link: "pre-matricula"
+    };
+    const secondLink = {
+        title: "FUNCIONÁRIO",
+        link: ""
+    };
 
     return (
         <div>

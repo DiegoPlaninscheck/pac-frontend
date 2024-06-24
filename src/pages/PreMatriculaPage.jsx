@@ -1,19 +1,12 @@
 import { Link } from "react-router-dom";
 
-import PreMatriculaFinal from "./PreMatriculaFinal";
-
 import { Box, TextField, Typography, Button } from "@mui/material"
 import { styled } from '@mui/system'
+
 import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded';
 
 import AlunoConstancia from "../assets/alunoConstancia.png"
 import "../components/PreMatricula/PreMatricula.css"
-
-const MainBox = styled(Box)({
-    display: 'flex',
-    gap: '16px',
-    flexWrap: 'wrap'
-});
 
 const BoxInputs = styled(Box)({
     width: "100%",
@@ -58,6 +51,5 @@ const PreMatricula = () => {
         </>
     )
 }
-
 
 export default PreMatricula;

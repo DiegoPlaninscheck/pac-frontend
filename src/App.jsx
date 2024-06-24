@@ -1,14 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/Home';
-import CadastroUsuarioPage from "./pages/CadastroUsuario";
-import VisualizarPreMatricula from './pages/VisualizarPreMatricula';
-import PreMatriculaFinal from './pages/PreMatriculaFinal';
-import PreMatricula from './pages/PreMatricula';
+
 import HomePage from './pages/HomePage';
-import UserRegister from './pages/UserRegisterPage';
-import CadastroUsuarioPage from "./pages/UserRegisterPage";
-import EmployeePage from './pages/EmployeePage';
-import PreRegistrationPage from './pages/PreRegistrationPage';
+import UserRegisterPage from './pages/UserRegisterPage';
+import PreMatriculaPage from './pages/PreMatriculaPage';
+import PreMatriculaFinalPage from './pages/PreMatriculaFinalPage';
+import HomeUserPage from './pages/HomeUserPage';
+import VisualizarPreMatriculaPage from './pages/VisualizarPreMatriculaPage';
+
 import './App.css';
 
 const App = () => {
@@ -16,14 +14,13 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route exact path='/cadastro-usuario' element={<CadastroUsuarioPage />} />
-        <Route exact path='/visualizar-pre-matricula' element={<VisualizarPreMatricula />} />
-        <Route exact path='/pre-matricula-final' element={<PreMatriculaFinal />} />
-        <Route exact path='/pre-matricula' element={<PreMatricula />} />
-        <Route exact path="/funcionario" element={<UserRegister />} />
-        <Route exact path='/funcionario' element={<CadastroUsuarioPage />} />
-        <Route exact path='/pre-matricula' element={<PreRegistrationPage />} />
-        <Route exact path='/acesso-usuario' element={<EmployeePage />} />
+        <Route exact path="/usuario" element={<UserRegisterPage />} />
+        <Route exact path='/pre-matricula' element={<PreMatriculaPage />} />
+        <Route exact path='/pre-matricula-final' element={<PreMatriculaFinalPage />} />
+        <Route exact path='/home-usuario' element={<HomeUserPage />} />
+        <Route exact path='/visualizar-pre-matricula' element={<VisualizarPreMatriculaPage />} />
+        {/* <Route exact path='/cadastro-usuario' element={<CadastroUsuarioPage />} /> */}
+        {/* <Route exact path='/pre-matricula' element={<PreRegistrationPage />} /> */}
       </Routes>
     </BrowserRouter>
   );
