@@ -1,3 +1,5 @@
+import { createContext } from 'react';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
@@ -10,6 +12,7 @@ import VisualizarPreMatriculaPage from './pages/VisualizarPreMatriculaPage';
 import './App.css';
 
 const App = () => {
+
   return (
     <BrowserRouter>
       <Routes>

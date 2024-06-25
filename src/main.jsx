@@ -4,6 +4,10 @@ import App from './App';
 const container = document.getElementById('root');
 const root = createRoot(container);
 
+import { DataProvider } from './context/DataContext';
+
 root.render(
-    <App />
+    <DataProvider>
+        <App />
+    </DataProvider>
 );

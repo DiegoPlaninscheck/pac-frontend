@@ -1,10 +1,61 @@
+import { useContext, useEffect, useState } from "react";
+
 import { Button, TextField, Box, RadioGroup, FormControlLabel, Radio, Typography } from "@mui/material";
 import { FileUpload } from 'primereact/fileupload';
 
 import AlunoConstancia from "../assets/alunoConstancia.png"
 import "../components/PreMatriculaFinal/PreMatriculaFinal.css"
 
+import { DataContext } from "../context/DataContext";
+
+import axios from "../api/config";
+
 const PreMatriculaFinal = () => {
+    const [fotoAluno, setFotoAluno] = useState("");
+    const [rendaFamiliar, setRendaFamiliar] = useState("");
+    const [periodoEscolar, setPeriodoEscolar] = useState("");
+    const { data, setDataContext } = useContext(DataContext);
+
+    useEffect(() => console.log(data), []);
+
+    const criarEndereco = async () => {
+        const endereco = {
+            cep: data.cep,
+            rua: data.rua,
+            bairro: data.bairro,
+            cidade: data.cidade
+        };
+
+        const result = await axios.post("/address", endereco, {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        return result.data[0].idEndereco;
+    };
+
+    const realizarPreMatricula = async () => {
+        const preMatricula = {
+            nomeCompleto: data.nomeCompleto,
+            dataNascimento: data.dataNascimento,
+            nomeResponsavelLegal: data.nomeResponsavelLegal,
+            emailResponsavelLegal: data.emailResponsavelLegal,
+            fotoAluno: fotoAluno[0],
+            rendaFamiliar: rendaFamiliar,
+            periodoEscolar: periodoEscolar,
+            idEndereco: await criarEndereco()
+        }
+
+        console.log(preMatricula);
+
+        axios.post("/registration", preMatricula, {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+    };
+
     return (
         <>
             <Box sx={{ width: "100%", height: "auto", display: "flex" }}>
@@ -17,7 +68,7 @@ const PreMatriculaFinal = () => {
                     </Box>
                     <Box sx={{ marginBottom: "3rem" }}>
                         <div className="card">
-                            <FileUpload mode="advanced" name="demo[]" url={'/api/upload'} multiple accept="image/*" maxFileSize={1000000} emptyTemplate={<p className="m-0">Arraste e solte arquivos aqui para armazenar.</p>} />
+                            <FileUpload onSelect={(e) => setFotoAluno(e.files)} mode="advanced" name="demo[]" url={'/api/upload'} multiple accept="image/*" maxFileSize={1000000} emptyTemplate={<p className="m-0">Arraste e solte arquivos aqui para armazenar.</p>} />
                         </div>
                         {/* <Button
                             variant="contained"
@@ -31,7 +82,7 @@ const PreMatriculaFinal = () => {
                         </Button> */}
                     </Box>
                     <Box sx={{ width: "100%", display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "3rem" }}>
-                        <TextField sx={{ width: "80%" }} id="rendaFamiliar" label="Renda Familiar" variant="outlined" />
+                        <TextField sx={{ width: "80%" }} id="rendaFamiliar" label="Renda Familiar" variant="outlined" onChange={(e) => setRendaFamiliar(e.target.value)} />
                     </Box>
                     <Box sx={{ width: "80%", display: "flex", justifyContent: "center", justifyItems: "center", flexDirection: "column", marginBottom: "3rem" }}>
                         <Typography sx={{ fontFamily: "'Montserrat', sans-serif" }} variant="h6">Periodo escolar</Typography>
@@ -39,6 +90,7 @@ const PreMatriculaFinal = () => {
                             sx={{ width: "100%", display: "flex", justifyContent: "start", justifyItems: "center", flexDirection: "row" }}
                             aria-labelledby="demo-radio-buttons-group-label"
                             name="radio-buttons-group"
+                            onChange={(e) => setPeriodoEscolar(e.target.value)}
                         >
                             <FormControlLabel value="Matutino" control={<Radio sx={{ color: "#0D3162", '&.Mui-checked': { color: "#0D3162" } }} />} label="Matutino" />
                             <FormControlLabel value="Vespertino" control={<Radio sx={{ color: "#FFA500", '&.Mui-checked': { color: "#FFA500" } }} />} label="Vespertino" />
@@ -46,7 +98,7 @@ const PreMatriculaFinal = () => {
                         </RadioGroup>
                     </Box>
                     <Box >
-                        <Button sx={{ backgroundColor: "#0D3162" }} variant="contained">Realizar pré matricula</Button>
+                        <Button sx={{ backgroundColor: "#0D3162" }} variant="contained" onClick={() => realizarPreMatricula()}>Realizar pré matricula</Button>
                     </Box>
                 </Box>
             </Box >
