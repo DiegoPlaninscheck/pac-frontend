@@ -6,66 +6,12 @@ import axios from "../api/config.js";
 
 const VisualizarPreMatricula = () => {
 
-    const [data, setData] = useState([
-        {
-            id: 1,
-            numero_cadastro: 123,
-            aluno: 'aluno 1',
-            data_nascimento: '08/03/2005',
-            resposavel: 'responsavel 1',
-            telefone: '123456789',
-            email: "diego@gmail.com",
-        },
-        {
-            id: 2,
-            numero_cadastro: 456,
-            aluno: 'aluno 2',
-            data_nascimento: '08/03/2005',
-            resposavel: 'responsavel 2',
-            telefone: '123456789',
-            email: "gabriel@gmail.com",
-        },
-        {
-            id: 3,
-            numero_cadastro: 789,
-            aluno: 'aluno 3',
-            data_nascimento: '08/03/2005',
-            resposavel: 'responsavel 3',
-            telefone: '123456789',
-            email: "eduarda@gmail.com",
-        },
-    ]);
+    const [data, setData] = useState([]);
 
     useEffect(() => {
-        setData([
-            {
-                id: 1,
-                numero_cadastro: 123,
-                aluno: 'aluno 1',
-                data_nascimento: '08/03/2005',
-                resposavel: 'responsavel 1',
-                telefone: '123456789',
-                email: "diego@gmail.com",
-            },
-            {
-                id: 2,
-                numero_cadastro: 456,
-                aluno: 'aluno 2',
-                data_nascimento: '08/03/2005',
-                resposavel: 'responsavel 2',
-                telefone: '123456789',
-                email: "gabriel@gmail.com",
-            },
-            {
-                id: 3,
-                numero_cadastro: 789,
-                aluno: 'aluno 3',
-                data_nascimento: '08/03/2005',
-                resposavel: 'responsavel 3',
-                telefone: '123456789',
-                email: "eduarda@gmail.com",
-            },
-        ]);
+        axios.get("/registration").then((res) => {
+            setData(res.data)
+        });
     }, []);
 
     function exportToExcel() {
