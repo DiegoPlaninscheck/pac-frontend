@@ -9,7 +9,11 @@ const VisualizarPreMatricula = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        axios.get("/registration").then((res) => {
+        // axios.get("/registration").then((res) => {
+        //     setData(res.data)
+        // });
+
+        axios.get("/registration/getRegistrationAddress").then((res) => {
             setData(res.data)
         });
     }, []);
