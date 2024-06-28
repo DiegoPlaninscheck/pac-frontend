@@ -8,6 +8,7 @@ import PreMatriculaPage from './pages/PreMatriculaPage';
 import PreMatriculaFinalPage from './pages/PreMatriculaFinalPage';
 import HomeUserPage from './pages/HomeUserPage';
 import VisualizarPreMatriculaPage from './pages/VisualizarPreMatriculaPage';
+import AgendamentoMatriculaPage from './pages/AgendamentoMatriculaPage';
 
 import './App.css';
 
@@ -22,6 +23,7 @@ const App = () => {
         <Route exact path='/pre-matricula-final' element={<PreMatriculaFinalPage />} />
         <Route exact path='/home-usuario' element={<HomeUserPage />} />
         <Route exact path='/visualizar-pre-matricula' element={<VisualizarPreMatriculaPage />} />
+        <Route exact path='/agendar-matricula' element={<AgendamentoMatriculaPage />} />
         {/* <Route exact path='/cadastro-usuario' element={<CadastroUsuarioPage />} /> */}
         {/* <Route exact path='/pre-matricula' element={<PreRegistrationPage />} /> */}
       </Routes>
