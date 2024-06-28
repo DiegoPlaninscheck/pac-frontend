@@ -10,7 +10,7 @@ const HomePage = () => {
     };
     const secondLink = {
         title: "FUNCIONÁRIO",
-        link: ""
+        link: "home-usuario"
     };
 
     return (
