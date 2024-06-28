@@ -73,7 +73,6 @@ const PreMatricula = () => {
                                 console.log(e.format())
                             }} />
                         </LocalizationProvider>
-                        {/* <TextField sx={{ width: "250px" }} id="DataNascimento" label="Data de Nascimento" variant="outlined" onChange={(e) => setDataNascimento(e.target.value)} /> */}
                         <TextField sx={{ width: "250px" }} id="Rua" label="Rua" variant="outlined" onChange={(e) => setRua(e.target.value)} />
                     </BoxInputs>
                     <BoxInputs>

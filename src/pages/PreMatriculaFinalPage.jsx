@@ -1,5 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 
+import { Link } from "react-router-dom";
+
 import { Button, TextField, Box, RadioGroup, FormControlLabel, Radio, Typography } from "@mui/material";
 import { FileUpload } from 'primereact/fileupload';
 
@@ -67,9 +69,9 @@ const PreMatriculaFinal = () => {
                         <Typography sx={{ fontFamily: "'Montserrat', sans-serif" }} variant="h4">Pré-Matricula</Typography>
                     </Box>
                     <Box sx={{ marginBottom: "3rem" }}>
-                        <div className="card">
+                        {/* <div className="card">
                             <FileUpload onSelect={(e) => setFotoAluno(e.files)} mode="advanced" name="demo[]" url={'/api/upload'} multiple accept="image/*" maxFileSize={1000000} emptyTemplate={<p className="m-0">Arraste e solte arquivos aqui para armazenar.</p>} />
-                        </div>
+                        </div> */}
                         {/* <Button
                             variant="contained"
                             component="label"
@@ -98,7 +100,7 @@ const PreMatriculaFinal = () => {
                         </RadioGroup>
                     </Box>
                     <Box >
-                        <Button sx={{ backgroundColor: "#0D3162" }} variant="contained" onClick={() => realizarPreMatricula()}>Realizar pré matricula</Button>
+                        <Button sx={{ backgroundColor: "#0D3162" }} variant="contained" onClick={() => realizarPreMatricula()}><Link className="link" to={"/home-usuario"}>Realizar pré matricula</Link> </Button>
                     </Box>
                 </Box>
             </Box >

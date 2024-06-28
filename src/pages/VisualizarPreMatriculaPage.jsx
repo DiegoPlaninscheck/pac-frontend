@@ -9,23 +9,22 @@ const VisualizarPreMatricula = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        // axios.get("/registration").then((res) => {
-        //     setData(res.data)
-        // });
-
-        axios.get("/registration/getRegistrationAddress").then((res) => {
+        axios.get("/registration/registrationAddress").then((res) => {
+            for (let item of res.data) {
+                item.dataNascimento = item.dataNascimento.split("T")[0]
+            }
             setData(res.data)
         });
     }, []);
 
-    function exportToExcel() {
-        console.log('Exporting to Excel');
-        axios.post("/exportToExcel", data, {
-            headers: {
-                "Content-Type": "application/json",
-            }
-        }).then((res) => console.log(res));
-    }
+    // function exportToExcel() {
+    //     console.log('Exporting to Excel');
+    //     axios.post("/exportToExcel", data, {
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         }
+    //     }).then((res) => console.log(res));
+    // }
 
     return (
         <>

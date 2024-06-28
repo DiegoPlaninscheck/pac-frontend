@@ -3,6 +3,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.link {
+    color: #fff;
+    text-decoration: none;
+}
+
 .imagem {
     max-width: 100%;
     min-height: 100vh;
