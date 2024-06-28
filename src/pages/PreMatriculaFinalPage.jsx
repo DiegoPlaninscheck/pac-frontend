@@ -11,10 +11,9 @@ import "../components/PreMatriculaFinal/PreMatriculaFinal.css"
 import { DataContext } from "../context/DataContext";
 
 import axios from "../api/config";
-import { Link } from "react-router-dom";
 
 const PreMatriculaFinal = () => {
-    const [fotoAluno, setFotoAluno] = useState("");
+    // const [fotoAluno, setFotoAluno] = useState("");
     const [rendaFamiliar, setRendaFamiliar] = useState("");
     const [periodoEscolar, setPeriodoEscolar] = useState("");
     const { data, setDataContext } = useContext(DataContext);
@@ -44,7 +43,7 @@ const PreMatriculaFinal = () => {
             dataNascimento: data.dataNascimento,
             nomeResponsavelLegal: data.nomeResponsavelLegal,
             emailResponsavelLegal: data.emailResponsavelLegal,
-            fotoAluno: fotoAluno[0],
+            // fotoAluno: fotoAluno[0],
             rendaFamiliar: rendaFamiliar,
             periodoEscolar: periodoEscolar,
             idEndereco: await criarEndereco()
@@ -101,9 +100,13 @@ const PreMatriculaFinal = () => {
                         </RadioGroup>
                     </Box>
                     <Box >
-                        <Button sx={{ backgroundColor: "#0D3162" }} variant="contained" onClick={() => realizarPreMatricula()}><Link className="link" to={"/home-usuario"}>Realizar pré matricula</Link> </Button>
-                    <Button sx={{ backgroundColor: "#0D3162" }} variant="contained" onClick={() => realizarPreMatricula()}>
-                            <Link className="link" to={"/agendar-matricula"}>Agendar matrícula</Link> </Button>
+
+                        {/* <Button sx={{ backgroundColor: "#0D3162" }} variant="contained" onClick={() => realizarPreMatricula()}><Link className="link" to={"/home-usuario"}>Realizar pré matricula</Link> </Button> */}
+
+                        <Button sx={{ backgroundColor: "#0D3162" }} variant="contained" onClick={() => realizarPreMatricula()}>
+                            <Link className="link" to={"/agendar-matricula"}>Agendar matrícula</Link>
+                        </Button>
+
                     </Box>
                 </Box>
             </Box >
