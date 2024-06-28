@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 import { Button, TextField, Box, RadioGroup, FormControlLabel, Radio, Typography } from "@mui/material";
 import { FileUpload } from 'primereact/fileupload';
 
-import AlunoConstancia from "../assets/alunoConstancia.png"
+import AlunoConstancia from "../assets/alunoConstancia.jpg"
 import "../components/PreMatriculaFinal/PreMatriculaFinal.css"
 
 import { DataContext } from "../context/DataContext";
 
 import axios from "../api/config";
+import { Link } from "react-router-dom";
 
 const PreMatriculaFinal = () => {
     const [fotoAluno, setFotoAluno] = useState("");
@@ -101,6 +102,8 @@ const PreMatriculaFinal = () => {
                     </Box>
                     <Box >
                         <Button sx={{ backgroundColor: "#0D3162" }} variant="contained" onClick={() => realizarPreMatricula()}><Link className="link" to={"/home-usuario"}>Realizar pré matricula</Link> </Button>
+                    <Button sx={{ backgroundColor: "#0D3162" }} variant="contained" onClick={() => realizarPreMatricula()}>
+                            <Link className="link" to={"/agendar-matricula"}>Agendar matrícula</Link> </Button>
                     </Box>
                 </Box>
             </Box >

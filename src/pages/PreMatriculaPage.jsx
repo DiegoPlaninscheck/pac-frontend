@@ -12,7 +12,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import NavigateNextRoundedIcon from '@mui/icons-material/NavigateNextRounded';
 
-import AlunoConstancia from "../assets/alunoConstancia.png"
+import AlunoConstancia from "../assets/alunoConstancia.jpg"
 import "../components/PreMatricula/PreMatricula.css"
 
 import { DataContext } from "../context/DataContext";

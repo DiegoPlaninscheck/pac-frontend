@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { styled } from '@mui/system'
 import { Button, TextField, Typography, Box } from '@mui/material';
 
-import AlunoConstancia from '../../assets/alunoConstancia.png';
+import AlunoConstancia from '../../assets/alunoConstancia.jpg';
 import "./UserRegister.css";
 
 const BoxInputs = styled(Box)({
